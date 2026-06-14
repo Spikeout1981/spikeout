@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>英语消消乐</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 主菜单 -->
+    <div id="menu-screen" class="screen active">
+      <div class="menu-container">
+        <h1 class="game-title">
+          <span class="title-en">English</span>
+          <span class="title-match">消消乐</span>
+        </h1>
+        <p class="subtitle">小学四年级英语单词学习</p>
+        <div class="progress-bar-container">
+          <div class="progress-label">学习进度</div>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <div id="progress-text" class="progress-text">0%</div>
+        </div>
+        <div id="level-grid" class="level-grid"></div>
+      </div>
+    </div>
+
+    <!-- 游戏界面 -->
+    <div id="game-screen" class="screen">
+      <div class="game-header">
+        <button id="btn-back" class="btn btn-sm btn-outline">← 返回</button>
+        <div class="level-info">
+          <span id="level-name" class="level-name-display"></span>
+        </div>
+        <div class="timer-container">
+          <div class="timer-icon">⏱</div>
+          <div id="timer-bar-bg" class="timer-bar-bg">
+            <div id="timer-bar" class="timer-bar"></div>
+          </div>
+          <span id="timer-text" class="timer-text">00:00</span>
+        </div>
+      </div>
+      <div class="game-stats">
+        <span
+          >已消除: <strong id="match-count">0</strong> /
+          <strong id="total-pairs">0</strong></span
+        >
+        <span>本关最高分: <strong id="level-high-score">-</strong></span>
+      </div>
+      <div id="card-grid" class="card-grid"></div>
+      <div class="game-footer">
+        <button id="btn-restart" class="btn btn-outline">重新开始</button>
+      </div>
+    </div>
+
+    <!-- 结算弹窗 -->
+    <div id="result-modal" class="modal">
+      <div class="modal-content">
+        <div id="result-icon" class="result-icon"></div>
+        <h2 id="result-title"></h2>
+        <p id="result-message"></p>
+        <div id="result-score" class="result-score"></div>
+        <div id="name-input-area" class="name-input-area" style="display: none">
+          <label for="player-name">输入你的名字</label>
+          <input
+            type="text"
+            id="player-name"
+            maxlength="10"
+            placeholder="你的名字"
+          />
+        </div>
+        <div class="modal-buttons">
+          <button id="btn-leaderboard" class="btn btn-accent">排行榜</button>
+          <button id="btn-next-level" class="btn btn-primary">下一关</button>
+          <button id="btn-retry" class="btn btn-outline">再试一次</button>
+          <button id="btn-to-menu" class="btn btn-outline">返回菜单</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 排行榜弹窗 -->
+    <div id="leaderboard-modal" class="modal">
+      <div class="modal-content">
+        <h2>🏆 排行榜</h2>
+        <h3 id="leaderboard-level-name"></h3>
+        <div id="leaderboard-list" class="leaderboard-list"></div>
+        <div class="modal-buttons">
+          <button id="btn-close-leaderboard" class="btn btn-primary">
+            关闭
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/audio.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
