@@ -361,5 +361,5 @@ const LEVEL_DATA = [
 const GAME_CONFIG = {
   timePenalty: 5, // 配对错误扣除秒数
   maxLeaderboardEntries: 10,
-  defaultTimeLimit: 900,
+  defaultTimeLimit: 910,
 };
