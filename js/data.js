@@ -362,4 +362,6 @@ const GAME_CONFIG = {
   timePenalty: 5, // 配对错误扣除秒数
   maxLeaderboardEntries: 10,
   defaultTimeLimit: 900,
+  speechVolume: 1.0, // 语音音量 (0.0-1.0)
+  speechRate: 1.0, // 语音语速 (0.5-2.0, 1.0为正常速度)
 };
